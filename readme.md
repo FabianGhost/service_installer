@@ -4,11 +4,11 @@ run
 ```
 chmod +x service_installer
 ```
-#How to use
+# How to use
 run the script
 ```
 ./service_installer
 ```
 and follow the Steps
-#Changelog
+# Changelog
 -Release: 07.04.2019
