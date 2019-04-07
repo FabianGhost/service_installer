@@ -10,5 +10,10 @@ run the script
 ./service_installer
 ```
 and follow the Steps
+after installing you can Start and Stop your Service with
+example:
+```
+service start Teamspeak
+```
 # Changelog
--Release: 07.04.2019
+- Release: 07.04.2019
