@@ -9,6 +9,10 @@ run the script
 ```
 ./service_installer
 ```
+or download directly to your server
+```
+apt-get install git git-core && git clone https://github.com/FabianGhost/service_installer
+```
 and follow the Steps
 after installing you can Start and Stop your Service with
 example:
