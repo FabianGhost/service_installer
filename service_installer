@@ -1,0 +1,64 @@
+#!/bin/bash
+clear
+echo "made by ovo-dev.de"
+echo "
+"
+echo "Welcome to OvO  s Service Generator!"
+echo "Visit my github for more or if you find bugs feel free to open a issue here!
+>>> https://github.com/fabianghost"
+
+echo "OPTIONS"
+echo "1: Generate a Service"
+echo "2: Exit"
+
+read op
+
+    if [[ $op = 1 ]]; then
+        echo "Enter the service name"
+        read serviceName
+        echo "Enter a Description for the service"
+        read serviceDesc
+        echo "Enter the username for execute"
+        read serviceExecUser
+        echo "Set your Start Path example /home/user/program -x"
+        read serviceStartPath
+        echo "Set your Stop Path example: /home/user/program stop"
+        read serviceStopPath
+
+        echo "[SUMMARY]
+Servicename: $serviceName
+Service Description. $serviceDesc
+Executing user: $serviceExecUser
+Start path: $serviceStartPath
+Stop Path: $serviceStopPath"
+        
+        touch /lib/systemd/system/$serviceName.service
+        echo "[Unit]
+Description=$serviceDesc
+After=network.target
+
+[Service]
+User=$serviceExecUser
+Group=$serviceExecUser
+Type=forking
+ExecStart=$serviceStartPath
+ExecStop=$serviceStopPath
+RestartSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target" >> /lib/systemd/system/$serviceName.service
+systemctl daemon-reload
+systemctl enable $serviceName.service
+echo "Now you can use for Example: service start $serviceName to start or stop your Service!
+"
+echo "Thanks for using this Generator!
+bye."
+        exit
+    elif [[ $op = 2 ]]; then
+        echo exiting now ...
+        exit
+    else
+        echo "Invalid input try again"
+    fi
+exit
