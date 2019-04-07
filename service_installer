@@ -5,7 +5,8 @@ echo "
 "
 echo "Welcome to OvO  s Service Generator!"
 echo "Visit my github for more or if you find bugs feel free to open a issue here!
->>> https://github.com/fabianghost"
+>>> https://github.com/fabianghost
+"
 
 echo "OPTIONS"
 echo "1: Generate a Service"
