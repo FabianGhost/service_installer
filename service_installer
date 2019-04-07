@@ -31,6 +31,8 @@ Service Description. $serviceDesc
 Executing user: $serviceExecUser
 Start path: $serviceStartPath
 Stop Path: $serviceStopPath"
+
+sleep 5
         
         touch /lib/systemd/system/$serviceName.service
         echo "[Unit]
