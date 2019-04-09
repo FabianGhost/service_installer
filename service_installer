@@ -64,5 +64,6 @@ bye."
         exit
     else
         echo "Invalid input try again"
+        ./service_installer
     fi
 exit
