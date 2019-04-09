@@ -53,7 +53,8 @@ Restart=always
 WantedBy=multi-user.target" >> /lib/systemd/system/$serviceName.service
 systemctl daemon-reload
 systemctl enable $serviceName.service
-echo "Now you can use for Example: service start $serviceName to start or stop your Service!
+echo "
+Now you can use for Example: service $serviceName start to start or stop your Service!
 "
 echo "Thanks for using this Generator!
 bye."
