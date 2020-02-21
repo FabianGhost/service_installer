@@ -22,9 +22,9 @@ read op
         read serviceDesc
         echo "Enter the username for execute"
         read serviceExecUser
-        echo "Set your Start Path example /home/user/program -x"
+        echo "Set your Start Path example /bin/bash /home/user/program -x"
         read serviceStartPath
-        echo "Set your Stop Path example: /home/user/program stop"
+        echo "Set your Stop Path example: /bin/bash /home/user/program stop"
         read serviceStopPath
 
         echo "[SUMMARY]
